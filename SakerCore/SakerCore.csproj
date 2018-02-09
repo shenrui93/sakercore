@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>SakerCore</AssemblyName>
+    <RootNamespace>SakerCore</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/shenrui93/sakercore/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/shenrui93/sakercore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/shenrui93/sakercore</RepositoryUrl>
+    <RepositoryType>C#</RepositoryType>
+    <Copyright>Copyright (c) 2018 逆尘</Copyright>
+    <Authors>shenrui</Authors>
+    <Company>shenrui</Company>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Description>针对netcore的一些方法封装</Description>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>false</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <DocumentationFile>bin\Debug\netcoreapp2.0\SakerCore.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\netcoreapp2.0\SakerCore.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="SocketPipeline\**" />
+    <EmbeddedResource Remove="SocketPipeline\**" />
+    <None Remove="SocketPipeline\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Serialization\JsonHeper.cs" />
+  </ItemGroup>
+
+</Project>

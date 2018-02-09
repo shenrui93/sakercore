@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SakerCore", "sakercore\SakerCore.csproj", "{080777D5-1ADA-4F2E-8BAF-2CDBFFEB7A2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SakerCoreXUnitTest", "SakerCoreXUnitTest\SakerCoreXUnitTest.csproj", "{75557317-1508-44E0-8B95-B4E8BE1F5F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{68ED35D1-4950-4EBE-8B66-F5243839816C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{080777D5-1ADA-4F2E-8BAF-2CDBFFEB7A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080777D5-1ADA-4F2E-8BAF-2CDBFFEB7A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080777D5-1ADA-4F2E-8BAF-2CDBFFEB7A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080777D5-1ADA-4F2E-8BAF-2CDBFFEB7A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75557317-1508-44E0-8B95-B4E8BE1F5F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75557317-1508-44E0-8B95-B4E8BE1F5F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75557317-1508-44E0-8B95-B4E8BE1F5F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75557317-1508-44E0-8B95-B4E8BE1F5F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCE8EA0B-67F7-4FDE-B388-D17DFE18AED7}
+	EndGlobalSection
+EndGlobal
