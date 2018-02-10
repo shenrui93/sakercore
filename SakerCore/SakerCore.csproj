@@ -25,7 +25,7 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <DocumentationFile>bin\Debug\netcoreapp2.0\SakerCore.xml</DocumentationFile>
   </PropertyGroup>
 
@@ -40,7 +40,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Serialization\JsonHeper.cs" />
+    <Compile Remove="Serialization\JsonHeper2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
 
 </Project>

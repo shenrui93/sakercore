@@ -3,23 +3,23 @@
  * 创建时间：   2016/5/25 13:09:42
  * 创建人员：   沈瑞
  * CLR版本号：  4.0.30319.42000
- * 备注信息：   未填写备注信息
+ * 备注信息：   提供基于Json的序列化和反序列化支持操作
  * 
  * *************************************************************************/
 
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Saker.Serialization
+namespace SakerCore.Serialization
 {
 
     namespace Json
     {
         /// <summary>
-        /// 类JsonHelper的注释信息
+        /// 提供基于Json的序列化和反序列化支持操作
         /// </summary>
         public class JsonHelper
         {
@@ -117,7 +117,7 @@ namespace Saker.Serialization
                     var json = InternalReadFile(path);
                     if (string.IsNullOrEmpty(json))
                         return default(T);
-                    return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json);
+                    return JsonConvert.DeserializeObject<T>(json);
                 }
                 catch //(Exception ex)
                 {
