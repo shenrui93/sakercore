@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace SakerCore.Data
 {
 
+    /// <summary>
+    /// 为 SQL Server 数据库提供访问驱动程序
+    /// </summary>
     public class MSSQLServerDBEntityProvide : IDBEntityProvide
     {
         public IDbCommand BuildInitCommand(IDbConnection connection, string storedProcName, IDataParameter[] parameters)
@@ -20,12 +24,23 @@ namespace SakerCore.Data
 
             WriteDBTrace(command);
 
-            command.Parameters.Add(new SqlParameter("ReturnValue",
-                SqlDbType.Int, 4, ParameterDirection.ReturnValue,
-                false, 0, 0, string.Empty, DataRowVersion.Default, null));
+            command.Parameters.Add(new SqlParameter(
+                parameterName: "ReturnValue",
+                dbType: SqlDbType.Int,
+                size: 4,
+                direction: ParameterDirection.ReturnValue,
+                precision: 0,
+                scale: 0,
+                sourceColumn: string.Empty,
+                sourceVersion: DataRowVersion.Default,
+                sourceColumnNullMapping: false,
+                value: null,
+                xmlSchemaCollectionDatabase: string.Empty,
+                xmlSchemaCollectionOwningSchema: string.Empty,
+                xmlSchemaCollectionName: string.Empty
+               ));
             return command;
         }
-
         private void WriteDBTrace(SqlCommand command)
         {
             //StringBuilder strb = new StringBuilder();
@@ -45,7 +60,6 @@ namespace SakerCore.Data
 
 
         }
-
         private SqlCommand BuildQueryCommand(SqlConnection connection, string storedProcName, IDataParameter[] parameters)
         {
             SqlCommand command = new SqlCommand(storedProcName, connection);
@@ -65,7 +79,6 @@ namespace SakerCore.Data
             }
             return command;
         }
-
         public IDbCommand BulidDBCommand(string sql)
         {
             return new System.Data.SqlClient.SqlCommand(sql);
@@ -88,26 +101,5 @@ namespace SakerCore.Data
             if (!param.Contains("ReturnValue")) return 0;
             return ((SqlParameter)param["ReturnValue"]).Value;
         }
-        public IAsyncResult BeginExecuteReader(IDbCommand comm, AsyncCallback cb, object userObject)
-        {
-            var sqlcomm = comm as SqlCommand;
-            if (sqlcomm == null)
-            {
-                throw new NotSupportedException("提供了不支持的操作对象");
-            }
-            return sqlcomm.BeginExecuteReader(cb, userObject);
-
-        }
-        public IDataReader EndExecuteReader(IDbCommand comm, IAsyncResult iar)
-        {
-            var sqlcomm = comm as SqlCommand;
-            if (sqlcomm == null)
-            {
-                throw new NotSupportedException("提供了不支持的操作对象");
-            }
-            return sqlcomm.EndExecuteReader(iar);
-
-        }
     }
-
 }

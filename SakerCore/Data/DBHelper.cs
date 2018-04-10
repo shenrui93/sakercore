@@ -134,23 +134,7 @@ namespace SakerCore.Data
     /// 数据实体提供程序，提供基础的数据库操作
     /// </summary>
     public interface IDBEntityProvide
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="comm"></param>
-        /// <param name="cb"></param>
-        /// <param name="userObject"></param>
-        /// <returns></returns>
-        IAsyncResult BeginExecuteReader(IDbCommand comm, AsyncCallback cb, object userObject);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="iar"></param>
-        /// <param name="comm"></param>
-        /// <returns></returns>
-        IDataReader EndExecuteReader(IDbCommand comm, IAsyncResult iar);
-
+    { 
         /// <summary>
         /// 初始化执行存储过程的存储过程命令行，返回comm
         /// </summary>
