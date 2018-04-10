@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SakerCore", "sakercore\Sake
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SakerCoreXUnitTest", "SakerCoreXUnitTest\SakerCoreXUnitTest.csproj", "{75557317-1508-44E0-8B95-B4E8BE1F5F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{68ED35D1-4950-4EBE-8B66-F5243839816C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{75557317-1508-44E0-8B95-B4E8BE1F5F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75557317-1508-44E0-8B95-B4E8BE1F5F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75557317-1508-44E0-8B95-B4E8BE1F5F07}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68ED35D1-4950-4EBE-8B66-F5243839816C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

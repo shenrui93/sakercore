@@ -62,7 +62,7 @@ namespace SakerCore.IO
 
         IBinnarySerializer serializer;
         Encoding _encode;
-         
+
         #region 数据写入
 
         /// <summary>
@@ -406,7 +406,7 @@ namespace SakerCore.IO
 
 
     }
-     
+
     #region IBinnarySerializer
 
 
@@ -434,7 +434,7 @@ namespace SakerCore.IO
 
     #endregion
 
-     
+
     unsafe class BigEndianSerializer : IBinnarySerializer
     {
         private Stream _stream;
@@ -752,4 +752,3 @@ namespace SakerCore.IO
 
 }
 
- 

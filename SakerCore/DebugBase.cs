@@ -30,6 +30,9 @@ namespace SakerCore
         Stream _logStream;
         private static T _instance;
 
+        /// <summary>
+        /// 对象的初始化
+        /// </summary>
         public DebugBase()
         {
             _writer_log_queue.MessageComing = Writer_log_queue_MessageComing;

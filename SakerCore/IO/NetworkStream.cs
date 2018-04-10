@@ -186,7 +186,7 @@ namespace SakerCore.IO
             lock (root)
             {
                 if (this.count == 0) return -1;
-                return base.ReadByte(); 
+                return base.ReadByte();
             }
         }
 
@@ -324,7 +324,7 @@ namespace SakerCore.IO
                     return this._buffer[index];
                 }
             }
-        } 
+        }
         /// <summary>
         /// 读取但不删除数据
         /// </summary>
@@ -360,7 +360,7 @@ namespace SakerCore.IO
         public byte[] ToByteArray()
         {
             return ReadOnlyAllBytesInternal();
-        }  
+        }
 
 
         /// <summary>
@@ -376,7 +376,7 @@ namespace SakerCore.IO
         /// </summary>
         /// <param name="data"></param>
         public void Write(byte[] data)
-        { 
+        {
             Write(data, 0, data.Length);
         }
 
@@ -388,9 +388,8 @@ namespace SakerCore.IO
         {
             base.Dispose(disposing);
             if (System.Threading.Interlocked.CompareExchange(ref _isDisposed, 1, 0) != 0) return;
-             
-        }
 
+        }
 
         void InternalBlockCopy(byte[] src, int srcOffset, byte[] dst, int dstOffset, int count)
         {

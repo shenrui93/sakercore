@@ -44,7 +44,7 @@ using SakerCore.Extension;
         开始写入传输数据
      
      
-     */
+*/
 
 namespace SakerCore.Net
 {
@@ -277,7 +277,7 @@ namespace SakerCore.Net
         /// <param name="packdata"></param>
         /// <param name="needBytesPackdata"></param>
         /// <returns></returns>
-        private static unsafe bool UnPacketData(byte[] buffer, out TransferPacket packdata, bool needBytesPackdata = false)
+        private static bool UnPacketData(byte[] buffer, out TransferPacket packdata, bool needBytesPackdata = false)
         {
             return UnPacketData(new NetworkStream(buffer), out packdata, needBytesPackdata);
         }
