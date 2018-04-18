@@ -16,8 +16,4 @@
     <ProjectReference Include="..\sakercore\SakerCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-
 </Project>
